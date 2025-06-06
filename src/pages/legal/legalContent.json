@@ -1,0 +1,68 @@
+{
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "sections": [
+      {
+        "heading": "1. Introduction",
+        "content": "This Privacy Policy describes how we collect, use, and safeguard your personal information when you use our website."
+      },
+      {
+        "heading": "2. Information We Collect",
+        "content": "We collect your name, email address, phone number, shipping address, and payment details when you make a purchase or sign up for our services."
+      },
+      {
+        "heading": "3. Use of Information",
+        "content": "We use your information to fulfill orders, provide customer support, improve our services, and communicate relevant offers."
+      },
+      {
+        "heading": "4. Data Protection",
+        "content": "We implement secure systems and encryption to protect your personal information. However, no method of transmission over the Internet is 100% secure."
+      },
+      {
+        "heading": "5. Third-Party Services",
+        "content": "We may use trusted third-party services (e.g., payment gateways, logistics providers) who have their own privacy policies."
+      },
+      {
+        "heading": "6. Your Rights",
+        "content": "You may request access, correction, or deletion of your personal data by contacting us."
+      },
+      {
+        "heading": "7. Policy Updates",
+        "content": "We may update this policy occasionally. The revised version will be posted on this page with a new effective date."
+      }
+    ]
+  },
+  "termsAndConditions": {
+    "title": "Terms & Conditions",
+    "sections": [
+      {
+        "heading": "1. Acceptance of Terms",
+        "content": "By accessing our site or placing an order, you agree to these terms. Please read them carefully before using our services."
+      },
+      {
+        "heading": "2. Product Information",
+        "content": "We strive for accuracy in product descriptions, pricing, and availability. We reserve the right to correct errors and update information."
+      },
+      {
+        "heading": "3. Orders and Payments",
+        "content": "Orders are considered confirmed once payment is received. We use secure payment gateways such as Razorpay."
+      },
+      {
+        "heading": "4. Shipping and Delivery",
+        "content": "Shipping timelines are estimates. We are not liable for delays caused by third-party logistics partners."
+      },
+      {
+        "heading": "5. Cancellations and Returns",
+        "content": "Please refer to our Return Policy page for details. Items must be returned in original condition within the return window."
+      },
+      {
+        "heading": "6. Limitation of Liability",
+        "content": "We are not liable for indirect or consequential damages arising from the use of our platform."
+      },
+      {
+        "heading": "7. Governing Law",
+        "content": "These terms are governed by the laws of India. Any disputes shall be resolved in the jurisdiction of our registered office."
+      }
+    ]
+  }
+}
