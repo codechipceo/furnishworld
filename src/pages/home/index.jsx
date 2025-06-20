@@ -1,4 +1,5 @@
 import useProducts from "../../hooks/useProducts";
+import useTabTitle from "../../hooks/useTabTitle";
 import CategorySection from "./sections/category";
 import Hero from "./sections/hero";
 import PolicySection from "./sections/policy";
@@ -6,6 +7,7 @@ import ProductsSection from "./sections/products";
 import SpotLight from "./sections/spotlight";
 import Store from "./sections/store";
 const Home = () => {
+  useTabTitle("Furnishworld - Home");
 
   const { products, categories, loading}=useProducts()
 
