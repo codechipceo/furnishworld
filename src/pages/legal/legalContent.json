@@ -64,5 +64,72 @@
         "content": "These terms are governed by the laws of India. Any disputes shall be resolved in the jurisdiction of our registered office."
       }
     ]
+  },
+  "returnAndWarrantyPolicy": {
+    "title": "Returns, Refunds & Warranty Policy",
+    "sections": [
+      {
+        "heading": "1. Returns & Exchanges",
+        "content": "We offer a 1-year warranty on all products for manufacturing defects and damages during delivery. In case of damage, please contact us within 24 hours at support@goldenparadisefurniture.in or +91-7838834141. Exchanges are applicable only if the product is damaged and reported within 24 hours."
+      },
+      {
+        "heading": "2. Cancellations & Refunds",
+        "content": "Orders can be canceled only if they have not been processed. Refunds are issued for damaged or incorrect products if reported within 7 days of delivery. Items must be unused and returned in original condition along with a receipt."
+      },
+      {
+        "heading": "3. Delivery Policies",
+        "content": "Products are made-to-order and shipped within 7 working days. Multiple items may be shipped separately. We will notify you in case of delays or back-orders."
+      },
+      {
+        "heading": "4. Damage in Transit (Outside Delhi/NCR)",
+        "content": "Customers must inspect items upon delivery. If damage is found, it must be reported to the delivery partner and returned in the same truck. Failing to do so voids the return/exchange warranty."
+      },
+      {
+        "heading": "5. Shipping Charges",
+        "content": "Shipping is free across India. However, customers are responsible for any additional charges such as ODA (Out-of-Delivery Area), fuel surcharge, GST, or state-specific levies. Delivery is made to ground floor only."
+      },
+      {
+        "heading": "6. Warranty Coverage",
+        "content": "A 12-month warranty covers manufacturing defects under normal use. It does not cover wear and tear, self-damage, water exposure, fabric wear, or natural changes in solid wood (like minor cracks or grain lines)."
+      },
+      {
+        "heading": "7. Refund Processing",
+        "content": "Once the return is received and inspected, we’ll notify you of the approval. If approved, the refund will be issued to your original payment method. Please allow several business days for it to reflect in your account."
+      }
+    ]
+  },
+
+  "shippingAndDeliveryPolicy": {
+    "title": "Shipping & Delivery Policy",
+    "sections": [
+      {
+        "heading": "1. Shipping Timeline",
+        "content": "All our products are made-to-order and are typically shipped within 7 working days of order confirmation."
+      },
+      {
+        "heading": "2. Shipping Charges",
+        "content": "We offer free shipping across most regions in India. However, additional charges such as ODA (Out-of-Delivery-Area) fees, fuel surcharges, odd-dimension handling charges, and applicable GST will be borne by the customer."
+      },
+      {
+        "heading": "3. Delivery Details",
+        "content": "Deliveries are made to the ground floor of the building only. If the delivery vehicle cannot reach your doorstep due to narrow lanes or restrictions, you must collect the item from the nearest accessible point."
+      },
+      {
+        "heading": "4. Delivery Locations",
+        "content": "We deliver across India, including Tier 1, Tier 2, and Tier 3 cities. Remote regions and northeastern states may be subject to additional charges and extended delivery timelines."
+      },
+      {
+        "heading": "5. Delivery Partners",
+        "content": "We work with trusted logistics partners to ensure safe and timely delivery of your furniture."
+      },
+      {
+        "heading": "6. Delivery Communication",
+        "content": "Customers will receive updates on order status and tracking details once the product has been shipped. If any delay occurs, we will inform you within 7 working days of your order."
+      },
+      {
+        "heading": "7. Contact Us",
+        "content": "For any shipping or delivery-related queries, please contact us at Furnishworld0@gmail.com or call us at +91 92057 53225."
+      }
+    ]
   }
 }

@@ -7,7 +7,7 @@ const FooterLinks = ({ arr, title }) => {
       <ul className="text-gray-500 dark:text-gray-400 font-medium">
         {arr.map((resource, index) => (
           <li key={index} className="mb-4">
-            <Link to={resource.url}  target="_blank" className="hover:underline">
+            <Link to={resource.url} target="_blank" className="hover:underline">
               {resource.label}
             </Link>
           </li>
@@ -42,6 +42,14 @@ const legal = [
   {
     label: "Terms & Conditions",
     url: "/terms-and-conditions",
+  },
+  {
+    label: "Return Policy",
+    url: "/return-policy",
+  },
+  {
+    label: "Shipping & Delivery",
+    url: "/shipping-and-delivery",
   },
 ];
 function Footer() {

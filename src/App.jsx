@@ -57,6 +57,14 @@ function App() {
       element: <Layout children={<LegalPage type="privacyPolicy" />} />,
     },
     {
+      path: "/return-policy",
+      element: <Layout children={<LegalPage type="returnAndWarrantyPolicy" />} />,
+    },
+    {
+      path: "/shipping-and-delivery",
+      element: <Layout children={<LegalPage type="shippingAndDeliveryPolicy" />} />,
+    },
+    {
       path: "*",
       element: <Layout children={<NotFoundPage />} />,
     },
