@@ -40,13 +40,11 @@ export default function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
       const code = await Auth.signUp(form);
-      console.log(code)
 
     if (code >= 200 && code <=299) {
         toast.success("Signup completed")
         navigate("/signin");
     }
-    console.log("Submitting:", form);
   };
 
   return (

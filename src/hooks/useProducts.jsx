@@ -27,7 +27,6 @@ const useProducts = (categoryIds) => {
     try {
       setLoading(true);
       const response = await Products.getProducts(queryString);
-      console.log(response.docs.length, new Date().getMilliseconds());
       const updatedProduct = response.docs.map((item) => serialiseProduct(item));
       setProducts(updatedProduct);
       setLoading(false);

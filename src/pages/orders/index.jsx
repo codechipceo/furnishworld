@@ -28,7 +28,7 @@ function sanitizeOrderData(order) {
 
     shipmentDetail: order.deliveryStatus === "processing" ? "Your order is being processed" : `Delivered on ${formatDate(order.updatedAt)}`,
     paymentStatus: order.paymentStatus.charAt(0).toUpperCase() + order.paymentStatus.slice(1),
-    paymentDetail: `Via ${order.paymentMethod.replace(/_/g, " ").toUpperCase()}`,
+    paymentDetail: `Via ${order?.paymentMethod?.replace(/_/g, " ").toUpperCase()}`,
     actions: ["View Order Details"],
   };
 }
@@ -38,9 +38,7 @@ const Orders = () => {
 
   useEffect(() => {
     api.get("/api/orders").then((res) => {
-      console.log(res.data.docs);
       const docs = res.data.docs.map((doc) => sanitizeOrderData(doc));
-      console.log(docs);
       setOrders(docs);
     });
   }, []);

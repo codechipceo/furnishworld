@@ -105,7 +105,6 @@ export default function CheckoutPage() {
       const orderId = data?.order?.razorpayOrderId;
       const docId = data?.order?.id;
 
-      console.log("Received Order Id from server:", orderId);
       if (!orderId) {
         throw new Error("No order ID received from server");
       }
@@ -119,7 +118,6 @@ export default function CheckoutPage() {
         image: "/logo.png",
         order_id: orderId,
         handler: function (response) {
-          console.log("Payment successful:", response);
 
           api
             .post("/api/payment/verify-payment", {
@@ -129,11 +127,9 @@ export default function CheckoutPage() {
               order_id: docId,
             })
             .then((res) => {
-              console.log("Payment verified successfully:", res);
               navigate("/orders");
             })
             .catch((error) => {
-              console.error("Error verifying payment:", error);
               alert("Payment was successful but there was an error updating your order. Please contact support.");
             });
         },
@@ -150,23 +146,18 @@ export default function CheckoutPage() {
         },
         modal: {
           ondismiss: function () {
-            console.log("Payment modal dismissed");
+            navigate("/orders");
           },
         },
       };
-
-      console.log("Opening Razorpay with options:", options);
       const razorpay = new window.Razorpay(options);
       razorpay.open();
     } catch (error) {
-      console.error("Error in payment processing:", error);
       alert(`Error processing payment: ${error.message || "Please try again later."}`);
     }
   };
 
-  const handleConfirm = () => {
-    alert("Order confirmed! 🚚");
-  };
+
   const breadcrumbItems = [
     { label: "Home", href: "/" },
     { label: "Checkout", href: "/checkout" },

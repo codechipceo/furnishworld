@@ -36,9 +36,9 @@ function sanitizeOrderDetailData(order) {
       subtotal: item.product.price * item.quantity, // Calculate subtotal for each item
     })),
     shipmentStatus: deliveryStatusMap[order.deliveryStatus].label,
-    shipmentDetail: order.deliveryStatus === "processing" ? "Your order is being processed" : `Delivered on ${formatDate(order.updatedAt)}`,
-    paymentStatus: order.paymentStatus.charAt(0).toUpperCase() + order.paymentStatus.slice(1),
-    paymentDetail: `Via ${order.paymentMethod.replace(/_/g, " ").toUpperCase()}`,
+    shipmentDetail: "",
+    paymentStatus: order?.paymentStatus?.charAt(0).toUpperCase() + order?.paymentStatus?.slice(1),
+    paymentDetail: `Via ${order?.paymentMethod?.replace(/_/g, " ").toUpperCase()}`,
     shippingAddress: order.shippingAddress,
     billingAddress: order.billingAddress,
     name: order.customer.name,
@@ -60,12 +60,10 @@ const OrderDetail = () => {
     api
       .get(`/api/orders/${orderId}?depth=1`) // Use the orderId from params for the API call
       .then((res) => {
-        console.log(res.data);
         setOrder(sanitizeOrderDetailData(res.data));
         setLoading(false);
       })
-      .catch((err) => {
-        console.error("Error fetching order details:", err);
+      .catch(() => {
         setError("Failed to load order details.");
         setLoading(false);
       });

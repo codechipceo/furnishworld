@@ -62,7 +62,6 @@ const CategoriesTags = ({ categories }) => {
 };
 
 const ProductInfo = ({ product }) => {
-  console.log(product)
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [variant, setVariant] = useState(null);
@@ -72,9 +71,9 @@ const ProductInfo = ({ product }) => {
   const navigate = useNavigate();
   useEffect(() => {
     if (product && product?.variants.length > 0) {
-      setSelectedColor(product.colors[0].id);
-      setVariant(product.variants[0]);
-      setSelectedSize(product.variants[0].id);
+      setSelectedColor(product?.colors?.[0].id);
+      setVariant(product?.variants?.[0]);
+      setSelectedSize(product?.variants?.[0].id);
     }
   }, [product?.variants?.length]);
 
@@ -94,11 +93,11 @@ const ProductInfo = ({ product }) => {
       {/* Categories */}
       {product?.categories && product?.categories.length > 0 && <CategoriesTags categories={product?.categories} />}
       {/* Colors Selection */}
-      {product.colors && product.colors.length > 0 && (
+      {product?.colors && product?.colors.length > 0 && (
         <div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Colors:</h3>
           <div className="flex space-x-3">
-            {product.colors.map((color) => (
+            {product?.colors.map((color) => (
               <button
                 key={color.id}
                 className={`w-8 h-8 rounded-full border-2 ${
@@ -142,7 +141,7 @@ const ProductInfo = ({ product }) => {
       <div className="mb-6 text-gray-700">
         <span className="font-semibold">Availability: </span>
         {product?.variants?.[0].stock > 0 ? (
-          <span className="text-green-600">In Stock ({product?.variants[0].stock} items)</span>
+          <span className="text-green-600">In Stock ({product?.variants?.[0].stock} items)</span>
         ) : (
           <span className="text-red-600">Out of Stock</span>
         )}
@@ -154,8 +153,8 @@ const ProductInfo = ({ product }) => {
           if (isAuthenticated) {
             await addToCart({
               items: {
-                product: product.id,
-                variant: variant.id,
+                product: product?.id,
+                variant: variant?.id,
                 quantity: quantity,
                 color: selectedColor,
               },
