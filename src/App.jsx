@@ -1,17 +1,19 @@
+import { useEffect } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Layout from "./layout/pageLayout";
-import SignInForm from "./pages/Auth/Signin";
-import Home from "./pages/home";
-import Products from "./pages/products";
 import { ToastContainer } from "react-toastify";
-import { SingleProduct } from "./pages/products/SingleProduct";
-import SignUp from "./pages/Auth/Signup";
+import Layout from "./layout/pageLayout";
 import AboutUs from "./pages/about";
 import ContactUs from "./pages/about/contact";
+import SignInForm from "./pages/Auth/Signin";
+import SignUp from "./pages/Auth/Signup";
 import CheckoutPage from "./pages/checkout";
+import Home from "./pages/home";
 import LegalPage from "./pages/legal";
 import NotFoundPage from "./pages/NotFound";
-import { useEffect } from "react";
+import Products from "./pages/products";
+import { SingleProduct } from "./pages/products/SingleProduct";
+import Orders from "./pages/orders";
+import OrderDetail from "./pages/orders/order_detail";
 
 function App() {
   const routes = createBrowserRouter([
@@ -63,6 +65,14 @@ function App() {
     {
       path: "/shipping-and-delivery",
       element: <Layout children={<LegalPage type="shippingAndDeliveryPolicy" />} />,
+    },
+    {
+      path: "/orders",
+      element: <Layout children={<Orders />} />,
+    },
+    {
+      path: "/orders/:orderId",
+      element: <Layout children={<OrderDetail />} />,
     },
     {
       path: "*",

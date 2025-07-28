@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function ProductCard({ imageUrl1, imageUrl2, title, price, originalPrice, id }) {
+  const navigate = useNavigate()
   return (
-    <div className="min-w-2xs">
+    <div className="min-w-2xs" onClick={() => navigate(`/products/${id}`)}>
       <div></div>
       <div className="group border-gray-100/30 flex w-full max-w-xs flex-col self-center overflow-hidden rounded-lg border bg-white shadow-md">
         <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
@@ -20,8 +21,8 @@ function ProductCard({ imageUrl1, imageUrl2, title, price, originalPrice, id }) 
           </a>
           <div className="mt-2 mb-5 flex items-center justify-between">
             <p>
-              <span className="text-3xl font-bold text-black">${price}</span>
-              {originalPrice && <span className="text-sm text-black line-through">${originalPrice}</span>}
+              <span className="text-3xl font-bold text-black">₹{price}</span>
+              {originalPrice && <span className="text-sm text-black line-through">₹{originalPrice}</span>}
             </p>
           </div>
           <Link

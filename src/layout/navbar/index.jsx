@@ -140,14 +140,16 @@ const Navigation = () => {
                     );
                   })}
 
-                <a
-                  href="#"
+                <button
+                  onClick={() => {
+                    navigate("/checkout");
+                  }}
                   title=""
                   className="mb-2 me-2 inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                   role="button"
                 >
                   Proceed to Checkout
-                </a>
+                </button>
               </div>
             )}
 
@@ -189,23 +191,23 @@ const Navigation = () => {
               >
                 <>
                   <ul className="p-2 text-start text-sm font-medium text-gray-900 dark:text-white">
-                    <li>
-                      <a
-                        href="#"
+                    {/* <li>
+                      <Link
+                        to="/account"
                         title=""
                         className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                       >
                         My Account
-                      </a>
-                    </li>
+                      </Link>
+                    </li> */}
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        to="/orders"
                         title=""
                         className="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                       >
                         My Orders
-                      </a>
+                      </Link>
                     </li>
                   </ul>
 

@@ -12,7 +12,7 @@ const Store = () => {
         {/* Left: Image */}
         <div className='w-full md:w-1/2'>
           <img
-            src='https://images.durian.in/assets/images/home_page_store.jpg?tr=h-600'
+            src='/img/store.jpeg'
             alt='Example'
             className='w-full h-auto rounded-2xl shadow-lg object-cover'
           />

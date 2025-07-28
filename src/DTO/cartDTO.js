@@ -7,6 +7,7 @@ export const serialiseCartResponse = (cartResponse) => {
     const productVairant = product.variants.filter((item) => item.id === variant)[0];
     const data = {
       cartId: id,
+      productId: product.id,
       name: product.name,
       image: product.productImage.url,
       variant: productVairant,
